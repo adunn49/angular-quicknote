@@ -1,9 +1,19 @@
-<div class="notedashboard">
-  <div class="notedashboard__header"></div>
-  <div class="notedashboard__main">
-    <div class="notedashboard__main__note" ng-repeat="note in ndCtrl.getNotes()">
-      <div class="note__title">{{note.getTitle()}}</div>
-      <div class="note__content">{{note.getContent()}}</div>
-    </div>
+<md-content class="md-padding" layout-xs="column" layout="row">
+  <div flex-xs flex-gt-xs="50" layout="column">
+    <md-card md-theme="dark-blue" md-colors="amber" ng-repeat="note in ndCtrl.getNotes()">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{note.getTitle()}}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content md-colors="amber">
+        {{note.getContent()}}
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="end">
+        <md-button ng-click="ndCtrl.deleteNote(note)">
+          Delete
+        </md-button>
+      </md-card-actions>
+    </md-card>
   </div>
-</div>
+</md-content>

@@ -11,4 +11,7 @@ require('./noteMaker/notemanager');
 require('./noteMaker/quicknote');
 require('./noteMaker/notedashboard');
 
-require('angular').module('app', ['ngMaterial', 'app.notemanager', 'app.quicknote', 'app.notedashboard']);
+require('angular').module('app', ['ngMaterial', 'app.notemanager', 'app.quicknote', 'app.notedashboard'])
+.config(function($mdThemingProvider) {
+  $mdThemingProvider.theme('dark-blue').backgroundPalette('blue').dark();
+});
