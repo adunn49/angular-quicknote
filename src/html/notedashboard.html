@@ -1,0 +1,9 @@
+<div class="notedashboard">
+  <div class="notedashboard__header"></div>
+  <div class="notedashboard__main">
+    <div class="notedashboard__main__note" ng-repeat="note in ndCtrl.getNotes()">
+      <div class="note__title">{{note.getTitle()}}</div>
+      <div class="note__content">{{note.getContent()}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<md-content>
+   <section layout="row" md-theme="default" layout-md="column" layout-align="center center" layout-wrap>
+     <div class="quicknote" ng-class="{ 'quicknote--editmode': qnCtrl.isEditModeEnabled() }">
+       <div ng-if="!qnCtrl.isEditModeEnabled()" class="quicknote__header">
+         <md-button ng-click="qnCtrl.setEditMode(true)" class="md-raised">Add a Quick Note</md-button>
+       </div>
+       <div ng-if="qnCtrl.isEditModeEnabled()" class="quicknote__main">
+         <md-input-container class="md-block quicknote__title">
+           <input ng-model="qnCtrl.title" placeholder="Title" />
+         </md-input-container>
+         <md-input-container class="md-block quicknote__content">
+           <input ng-model="qnCtrl.content" placeholder="Note" ng-blur="qnCtrl.validateNote()">
+         </md-input-container>
+       </div>
+     </div>
+   </section>
+</md-content>

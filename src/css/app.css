@@ -1,0 +1,27 @@
+body {
+  margin: 20px;
+}
+
+.quicknote {
+}
+
+.quicknote--editmode {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.quicknote__header {
+
+}
+
+.quicknote__main {
+
+}
+
+.quicknote__main__title {
+
+}
+
+.quicknote__main__content {
+
+}
